@@ -1,0 +1,293 @@
+EESchema Schematic File Version 4
+LIBS:VaneController-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L teensy:Teensy3.2 U3
+U 1 1 5CEE14A2
+P 5200 3150
+F 0 "U3" H 5200 4737 60  0000 C CNN
+F 1 "Teensy3.2" H 5200 4631 60  0000 C CNN
+F 2 "teensy:Teensy30_31_32_LC" H 5200 2350 60  0001 C CNN
+F 3 "" H 5200 2350 60  0000 C CNN
+	1    5200 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:MC78M05_TO252 U1
+U 1 1 5CEE3A0C
+P 3050 2550
+F 0 "U1" H 3050 2792 50  0000 C CNN
+F 1 "MC78M05" H 3050 2701 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 3050 2775 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78M05.pdf" H 3050 2500 50  0001 C CNN
+	1    3050 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:MC78M05_TO252 U2
+U 1 1 5CEE4EDF
+P 3050 3400
+F 0 "U2" H 3050 3642 50  0000 C CNN
+F 1 "MC78M12" H 3050 3551 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 3050 3625 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78M05.pdf" H 3050 3350 50  0001 C CNN
+	1    3050 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J2
+U 1 1 5CEE6BC7
+P 1400 3250
+F 0 "J2" H 1508 3631 50  0000 C CNN
+F 1 "Motor" H 1508 3540 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 1400 3250 50  0001 C CNN
+F 3 "~" H 1400 3250 50  0001 C CNN
+	1    1400 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5CEE8CC3
+P 1400 2450
+F 0 "J1" H 1373 2424 50  0000 R CNN
+F 1 "Battery" H 1373 2333 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1400 2450 50  0001 C CNN
+F 3 "~" H 1400 2450 50  0001 C CNN
+	1    1400 2450
+	1    0    0    -1  
+$EndComp
+Text Label 1850 2450 2    50   ~ 0
+SWITCH
+Wire Wire Line
+	1600 3050 1850 3050
+Wire Wire Line
+	1600 3150 1850 3150
+Wire Wire Line
+	1600 3250 1850 3250
+Wire Wire Line
+	1600 3350 1850 3350
+Wire Wire Line
+	1600 3450 1850 3450
+Text Label 1850 3050 2    50   ~ 0
+1
+Text Label 1850 3250 2    50   ~ 0
+2
+Text Label 1850 3350 2    50   ~ 0
+3
+Text Label 1850 3450 2    50   ~ 0
+12V
+Wire Wire Line
+	2550 2550 2750 2550
+Wire Wire Line
+	2550 3400 2750 3400
+Wire Wire Line
+	3350 3400 3600 3400
+Wire Wire Line
+	3350 2550 3600 2550
+Text Label 2550 2550 0    50   ~ 0
+BATT
+Text Label 2550 3400 0    50   ~ 0
+BATT
+Text Label 3600 2550 2    50   ~ 0
+5V
+Text Label 3600 3400 2    50   ~ 0
+12V
+$Comp
+L power:GND #PWR0101
+U 1 1 5CEED4B4
+P 3050 2850
+F 0 "#PWR0101" H 3050 2600 50  0001 C CNN
+F 1 "GND" H 3055 2677 50  0000 C CNN
+F 2 "" H 3050 2850 50  0001 C CNN
+F 3 "" H 3050 2850 50  0001 C CNN
+	1    3050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5CEED711
+P 3050 3700
+F 0 "#PWR0102" H 3050 3450 50  0001 C CNN
+F 1 "GND" H 3055 3527 50  0000 C CNN
+F 2 "" H 3050 3700 50  0001 C CNN
+F 3 "" H 3050 3700 50  0001 C CNN
+	1    3050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5CEEDBB4
+P 1850 2550
+F 0 "#PWR0103" H 1850 2300 50  0001 C CNN
+F 1 "GND" H 1855 2377 50  0000 C CNN
+F 2 "" H 1850 2550 50  0001 C CNN
+F 3 "" H 1850 2550 50  0001 C CNN
+	1    1850 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5CEEDDFB
+P 1850 3150
+F 0 "#PWR0104" H 1850 2900 50  0001 C CNN
+F 1 "GND" V 1855 3022 50  0000 R CNN
+F 2 "" H 1850 3150 50  0001 C CNN
+F 3 "" H 1850 3150 50  0001 C CNN
+	1    1850 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5CEEE174
+P 4200 1850
+F 0 "#PWR0105" H 4200 1600 50  0001 C CNN
+F 1 "GND" V 4205 1722 50  0000 R CNN
+F 2 "" H 4200 1850 50  0001 C CNN
+F 3 "" H 4200 1850 50  0001 C CNN
+	1    4200 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 3950 6500 3950
+Text Label 6500 3950 2    50   ~ 0
+5V
+$Comp
+L power:GND #PWR0106
+U 1 1 5CEEEAAC
+P 4200 3450
+F 0 "#PWR0106" H 4200 3200 50  0001 C CNN
+F 1 "GND" V 4205 3322 50  0000 R CNN
+F 2 "" H 4200 3450 50  0001 C CNN
+F 3 "" H 4200 3450 50  0001 C CNN
+	1    4200 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5CEEEBAE
+P 6200 4050
+F 0 "#PWR0107" H 6200 3800 50  0001 C CNN
+F 1 "GND" V 6205 3922 50  0000 R CNN
+F 2 "" H 6200 4050 50  0001 C CNN
+F 3 "" H 6200 4050 50  0001 C CNN
+	1    6200 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5CEEFE4E
+P 6200 3350
+F 0 "#PWR0108" H 6200 3100 50  0001 C CNN
+F 1 "GND" V 6205 3222 50  0000 R CNN
+F 2 "" H 6200 3350 50  0001 C CNN
+F 3 "" H 6200 3350 50  0001 C CNN
+	1    6200 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6200 4250 6500 4250
+Wire Wire Line
+	6200 4350 6500 4350
+Wire Wire Line
+	6200 4450 6500 4450
+Text Label 6500 4250 2    50   ~ 0
+1
+Text Label 6500 4350 2    50   ~ 0
+2
+Text Label 6500 4450 2    50   ~ 0
+3
+NoConn ~ 4200 1950
+NoConn ~ 4200 2050
+NoConn ~ 4200 2150
+NoConn ~ 4200 2250
+NoConn ~ 4200 2350
+NoConn ~ 4200 2450
+NoConn ~ 4200 2550
+NoConn ~ 4200 2650
+NoConn ~ 4200 2750
+NoConn ~ 4200 2850
+NoConn ~ 4200 2950
+NoConn ~ 4200 3050
+NoConn ~ 4200 3150
+NoConn ~ 4200 3250
+NoConn ~ 4200 3350
+NoConn ~ 4200 3550
+NoConn ~ 4200 3650
+NoConn ~ 4200 3750
+NoConn ~ 4200 3850
+NoConn ~ 4200 3950
+NoConn ~ 4200 4050
+NoConn ~ 4200 4150
+NoConn ~ 4200 4250
+NoConn ~ 4200 4350
+NoConn ~ 4200 4450
+NoConn ~ 6200 4150
+NoConn ~ 6200 3850
+NoConn ~ 6200 3750
+NoConn ~ 6200 3650
+NoConn ~ 6200 3550
+NoConn ~ 6200 3450
+NoConn ~ 6200 3250
+NoConn ~ 6200 3150
+NoConn ~ 6200 3050
+NoConn ~ 6200 2950
+NoConn ~ 6200 2850
+NoConn ~ 6200 2750
+NoConn ~ 6200 2650
+NoConn ~ 6200 2550
+NoConn ~ 6200 2450
+NoConn ~ 6200 2350
+NoConn ~ 6200 2150
+NoConn ~ 6200 2250
+NoConn ~ 6200 2050
+NoConn ~ 6200 1950
+NoConn ~ 6200 1850
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5CEF9442
+P 1600 3700
+F 0 "#FLG0101" H 1600 3775 50  0001 C CNN
+F 1 "PWR_FLAG" H 1600 3873 50  0000 C CNN
+F 2 "" H 1600 3700 50  0001 C CNN
+F 3 "~" H 1600 3700 50  0001 C CNN
+	1    1600 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2450 1850 2450
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5CEEF475
+P 1400 3700
+F 0 "J3" H 1372 3674 50  0000 R CNN
+F 1 "Switch" H 1372 3583 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1400 3700 50  0001 C CNN
+F 3 "~" H 1400 3700 50  0001 C CNN
+	1    1400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2550 1850 2550
+Wire Wire Line
+	1850 3700 1600 3700
+Connection ~ 1600 3700
+Wire Wire Line
+	1850 3800 1600 3800
+Text Label 1850 3700 2    50   ~ 0
+SWITCH
+Text Label 1850 3800 2    50   ~ 0
+BATT
+$EndSCHEMATC
